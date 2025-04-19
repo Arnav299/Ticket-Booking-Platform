@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowTime - Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>ShowTime</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="movies.html">Movies</a>
+                <a href="events.html">Events</a>
+                <a href="#" id="userSection">Sign In</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Book Your Entertainment</h1>
+            <p>Movies, Events, and More</p>
+            <a href="movies.html" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <section class="featured">
+        <h2>Featured Movies</h2>
+        <div class="movie-grid">
+            <div class="movie-card" data-id="1">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 1">
+                </div>
+                <div class="movie-info">
+                    <h3>Interstellar</h3>
+                    <p>Sci-Fi/Adventure</p>
+                    <a href="movie-details.html?id=1" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="2">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 2">
+                </div>
+                <div class="movie-info">
+                    <h3>The Dark Knight</h3>
+                    <p>Action/Drama</p>
+                    <a href="movie-details.html?id=2" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="3">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 3">
+                </div>
+                <div class="movie-info">
+                    <h3>Inception</h3>
+                    <p>Sci-Fi/Action</p>
+                    <a href="movie-details.html?id=3" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="4">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 4">
+                </div>
+                <div class="movie-info">
+                    <h3>Dune</h3>
+                    <p>Sci-Fi/Adventure</p>
+                    <a href="movie-details.html?id=4" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured">
+        <h2>Upcoming Events</h2>
+        <div class="movie-grid">
+            <div class="movie-card" data-id="e1">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Event 1">
+                </div>
+                <div class="movie-info">
+                    <h3>Rock Concert</h3>
+                    <p>Music</p>
+                    <a href="event-details.html?id=e1" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="e2">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Event 2">
+                </div>
+                <div class="movie-info">
+                    <h3>Comedy Night</h3>
+                    <p>Stand-up Comedy</p>
+                    <a href="event-details.html?id=e2" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Name</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword">Confirm Password</label>
+                    <input type="password" id="regConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="showLogin">Sign In</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShowTime</h3>
+                <p>Your one-stop destination for booking movie tickets and event passes.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@showtime.com</p>
+                <p>Phone: +1 234 567 8900</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ShowTime. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

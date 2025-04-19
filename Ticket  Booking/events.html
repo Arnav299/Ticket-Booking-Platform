@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - ShowTime</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>ShowTime</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="movies.html">Movies</a>
+                <a href="events.html" class="active">Events</a>
+                <a href="#" id="userSection">Sign In</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Events</h1>
+    </section>
+
+    <section class="filters">
+        <div class="filter-container">
+            <select id="genreFilter">
+                <option value="">All Categories</option>
+                <option value="music">Music</option>
+                <option value="comedy">Comedy</option>
+                <option value="sports">Sports</option>
+                <option value="theater">Theater</option>
+            </select>
+            <select id="dateFilter">
+                <option value="">All Dates</option>
+                <option value="today">Today</option>
+                <option value="tomorrow">Tomorrow</option>
+                <option value="weekend">This Weekend</option>
+                <option value="week">This Week</option>
+            </select>
+            <button id="applyFilters" class="btn-small">Apply Filters</button>
+        </div>
+    </section>
+
+    <section class="events-list">
+        <div class="movie-grid">
+            <div class="movie-card" data-id="e1" data-genre="music">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Event 1">
+                </div>
+                <div class="movie-info">
+                    <h3>Rock Concert</h3>
+                    <p>Music</p>
+                    <p>Tue, Jul 25, 2023 | 8:00 PM</p>
+                    <p>City Arena</p>
+                    <a href="event-details.html?id=e1" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="e2" data-genre="comedy">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Event 2">
+                </div>
+                <div class="movie-info">
+                    <h3>Comedy Night</h3>
+                    <p>Stand-up Comedy</p>
+                    <p>Fri, Jul 28, 2023 | 7:30 PM</p>
+                    <p>Laugh Factory</p>
+                    <a href="event-details.html?id=e2" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="e3" data-genre="sports">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Event 3">
+                </div>
+                <div class="movie-info">
+                    <h3>Basketball Championship</h3>
+                    <p>Sports</p>
+                    <p>Sat, Jul 29, 2023 | 6:00 PM</p>
+                    <p>Sports Arena</p>
+                    <a href="event-details.html?id=e3" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="e4" data-genre="theater">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Event 4">
+                </div>
+                <div class="movie-info">
+                    <h3>Broadway Musical</h3>
+                    <p>Theater</p>
+                    <p>Sun, Jul 30, 2023 | 7:00 PM</p>
+                    <p>Grand Theater</p>
+                    <a href="event-details.html?id=e4" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="e5" data-genre="music">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Event 5">
+                </div>
+                <div class="movie-info">
+                    <h3>Jazz Festival</h3>
+                    <p>Music</p>
+                    <p>Sat, Aug 5, 2023 | 5:00 PM</p>
+                    <p>City Park</p>
+                    <a href="event-details.html?id=e5" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="e6" data-genre="comedy">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Event 6">
+                </div>
+                <div class="movie-info">
+                    <h3>Improv Night</h3>
+                    <p>Comedy</p>
+                    <p>Fri, Aug 11, 2023 | 8:30 PM</p>
+                    <p>Comedy Club</p>
+                    <a href="event-details.html?id=e6" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Name</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword">Confirm Password</label>
+                    <input type="password" id="regConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="showLogin">Sign In</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShowTime</h3>
+                <p>Your one-stop destination for booking movie tickets and event passes.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@showtime.com</p>
+                <p>Phone: +1 234 567 8900</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ShowTime. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

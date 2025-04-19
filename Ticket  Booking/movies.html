@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies - ShowTime</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>ShowTime</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="movies.html" class="active">Movies</a>
+                <a href="events.html">Events</a>
+                <a href="#" id="userSection">Sign In</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Movies</h1>
+    </section>
+
+    <section class="filters">
+        <div class="filter-container">
+            <select id="genreFilter">
+                <option value="">All Genres</option>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="sci-fi">Sci-Fi</option>
+            </select>
+            <select id="languageFilter">
+                <option value="">All Languages</option>
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="hindi">Hindi</option>
+            </select>
+            <button id="applyFilters" class="btn-small">Apply Filters</button>
+        </div>
+    </section>
+
+    <section class="movies-list">
+        <div class="movie-grid">
+            <div class="movie-card" data-id="1" data-genre="sci-fi" data-language="english">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 1">
+                </div>
+                <div class="movie-info">
+                    <h3>Interstellar</h3>
+                    <p>Sci-Fi/Adventure</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span>4.0/5</span>
+                    </div>
+                    <a href="movie-details.html?id=1" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="2" data-genre="action" data-language="english">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 2">
+                </div>
+                <div class="movie-info">
+                    <h3>The Dark Knight</h3>
+                    <p>Action/Drama</p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span>4.9/5</span>
+                    </div>
+                    <a href="movie-details.html?id=2" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="3" data-genre="sci-fi" data-language="english">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 3">
+                </div>
+                <div class="movie-info">
+                    <h3>Inception</h3>
+                    <p>Sci-Fi/Action</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span>4.2/5</span>
+                    </div>
+                    <a href="movie-details.html?id=3" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="4" data-genre="sci-fi" data-language="english">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 4">
+                </div>
+                <div class="movie-info">
+                    <h3>Dune</h3>
+                    <p>Sci-Fi/Adventure</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span>4.1/5</span>
+                    </div>
+                    <a href="movie-details.html?id=4" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="5" data-genre="comedy" data-language="english">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 5">
+                </div>
+                <div class="movie-info">
+                    <h3>The Hangover</h3>
+                    <p>Comedy</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span>4.0/5</span>
+                    </div>
+                    <a href="movie-details.html?id=5" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="6" data-genre="drama" data-language="english">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 6">
+                </div>
+                <div class="movie-info">
+                    <h3>The Shawshank Redemption</h3>
+                    <p>Drama</p>
+                    <div class="rating">
+                        <span class="stars">★★★★★</span>
+                        <span>4.8/5</span>
+                    </div>
+                    <a href="movie-details.html?id=6" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="7" data-genre="action" data-language="hindi">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 7">
+                </div>
+                <div class="movie-info">
+                    <h3>Pathaan</h3>
+                    <p>Action/Thriller</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span>4.0/5</span>
+                    </div>
+                    <a href="movie-details.html?id=7" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+            <div class="movie-card" data-id="8" data-genre="comedy" data-language="spanish">
+                <div class="movie-poster">
+                    <img src="https://via.placeholder.com/250x375" alt="Movie 8">
+                </div>
+                <div class="movie-info">
+                    <h3>La Familia Perfecta</h3>
+                    <p>Comedy</p>
+                    <div class="rating">
+                        <span class="stars">★★★☆☆</span>
+                        <span>3.5/5</span>
+                    </div>
+                    <a href="movie-details.html?id=8" class="btn-small">Book Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn">Sign In</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Name</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPassword">Confirm Password</label>
+                    <input type="password" id="regConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="showLogin">Sign In</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShowTime</h3>
+                <p>Your one-stop destination for booking movie tickets and event passes.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html">Movies</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@showtime.com</p>
+                <p>Phone: +1 234 567 8900</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 ShowTime. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
